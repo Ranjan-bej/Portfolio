@@ -1,0 +1,77 @@
+#project{
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    padding-top: 6;
+    padding-bottom: 15rem;
+}
+#project h2{
+    font-size: 3rem;
+    margin: 3rem;
+    margin-bottom: 8rem;
+}
+.card{
+    /* border: 4px solid yellow;s */
+    border: none;
+    border-radius: 1rem;
+}
+.card img{
+    height: 16rem;
+    transition: transform 0.5s;
+    border-radius: 1rem;
+}
+.img-caro{
+    border: 2px solid yellow;
+    border-radius: 10px;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),#0ef,cyan,rgb(0, 106, 112));
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.layer h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.layer p{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8
+}
+
+.card:hover img{
+    transform: scale(1.09);
+    opacity: 0.9;
+}
+.card:hover .layer{
+    height: 100%;
+    transform: scale(1.08);
+}
+.projects{
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+}
+@media screen and (max-width:850px) {
+    #project{
+        padding-bottom: 8rem;
+    }
+}

@@ -1,0 +1,106 @@
+#intro{
+    padding-top: 12rem;
+    padding-left: 2rem;
+    word-spacing: 10px;
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+    margin-bottom: 10rem;
+    /* border: 2px solid yellow; */
+}
+#intro img{
+    opacity: 0;
+    animation: opacityChange 1s ease forwards;
+    animation-delay: 0.9s;
+}
+#innerContent{
+    overflow: visible;
+    overflow-wrap: break-word;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    line-height: 80px;
+}
+#h3{
+    font-size: 200%;
+    font-family: "Poppins", sans-serif;
+    color: rgb(181, 216, 216);
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: .7s;
+    opacity: 0;
+}
+#h1{
+    font-size: 400%;
+    color: rgb(181, 216, 216);
+    font-family: "Poppins",sans-serif;
+    color: aquamarine;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: .8s;
+    opacity: 0;
+}
+#avatar{
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    z-index: -1;
+    height: 70%;
+    width: 40rem;
+    filter: hue-rotate(103deg);
+}
+#introtext{
+    opacity: 0;
+    line-height: 20px;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    color: aquamarine;
+    animation: opacityChange 1s ease forwards;
+    animation-delay: 0.9s;
+    max-width: 50rem;
+    text-align: left;
+}
+.social-link{
+    border: 3px solid #0ef;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px ;
+    border-radius: 50%;
+    font-size: 150%;
+    box-shadow: 0 0 5px #0ef;
+    margin: 10px;
+    opacity: 0;
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: calc(.8s*var(--i));
+}
+
+.social-link i{
+    color: #0ef;
+}
+
+.social-link:hover{
+    background: #0ef;
+    box-shadow: 0 0 15px rgb(231, 227, 227);
+}
+.social-link i:hover{
+    color: #081b29;
+}
+
+@media screen and (max-width:800px) {
+    #avatar{
+        height: 80%;
+    }
+    #intro{
+        height: 60vh;
+    }
+}
+@media screen and (max-width:650px){
+    #avatar{
+        display: none;
+    }
+    #intro{
+        padding-left: 0;
+    }
+}

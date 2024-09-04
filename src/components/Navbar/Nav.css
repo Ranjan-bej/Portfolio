@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar{
+    z-index: 2;
+    background-color:  #010a18;
+    position: fixed;
+    height:5rem;
+    width: 90vw;
+    /* border: 2px solid yellow; */
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 3em;
+    width: 3em;
+    opacity: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: slideRight 0.5s ease forwards;
+    margin-bottom: 1.5rem;
+}
+
+#menu{
+    height: 5rem;
+    width: 55%;
+    /* border: yellow solid; */
+    display: flex;
+    align-items: center;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    justify-content: space-around;
+}
+.menuItems{
+    text-decoration: none;
+    color: white;
+    height: 2em;
+    animation: slideBottom 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: calc(0.1s*var(--i));
+    margin-bottom: 1.5rem;
+    /* border: 1px solid orange; */
+}
+.menuItems:hover{
+    color: cyan;
+    /* padding-bottom: 0.5em; */
+    border-bottom: 2px solid cyan;
+    text-shadow: 0 0 5px cyan;
+    cursor:pointer;
+}
+
+button{
+
+    border: none;
+    height: 3em;
+    width: 7em;
+    padding: 0.5em;
+    color: #002872;
+    font-weight: bolder;
+    background-color:#0ef;
+    box-shadow:0 0 10px cyan;
+    animation: slideLeft 0.5s ease forwards;
+    opacity: 0;
+    border-radius:30px;
+    margin-bottom: 1.5rem ;
+}
+button:hover{
+    box-shadow:0 0 9px cyan, 0 0 25px cyan;
+}
+button:active{
+    transform: scale(0.9);
+    font-weight: light;
+}
+.active{
+    color: cyan;
+    border-bottom:2px solid cyan;
+}
+#Mobilemenu{
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    /* border: 2px solid yellow; */
+    border-radius: 23px;
+    width: 15rem;
+    background-color: rgb(75, 81, 96);
+    box-shadow: inset 3px 3px 5px rgb(151, 149, 149),inset -8px -5px 6px rgb(57, 61, 62);
+}
+.mobilemenuItems{
+    text-decoration: none;
+    color: white;
+    padding: 0.3rem;
+    /* border: 2px solid yellow; */
+    margin: 0.3rem;
+    width: 11rem;
+    text-align: center;
+    border-radius: 12px;
+    background-color:rgb(61, 67, 80);
+    box-shadow: 5px 6px 6px rgb(47, 46, 46);
+}
+.activemenu{
+    color: cyan;
+    text-decoration: none;
+    border-bottom:2px solid #0ef;
+}
+#mobileicon{
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 12px;
+}
+
+@media screen and (max-width:850px){
+    #mobileicon{
+        display: flex;
+    }
+    #menu{
+        display: none;
+    }
+    #menubtn{
+        display: none;
+    }
+}
